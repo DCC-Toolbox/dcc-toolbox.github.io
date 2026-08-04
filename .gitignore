@@ -1,0 +1,15 @@
+# Local captures and diagnostics may contain real asset data.
+*.capture.html
+dccentral-capture-*
+dccentral-diag-*
+
+# Local-only MV3 extension. Kept out of the repo because manifest.json has to
+# name the internal host it runs on.
+manifest.json
+popup.html
+popup.js
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
