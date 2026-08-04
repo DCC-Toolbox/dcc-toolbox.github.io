@@ -35,6 +35,23 @@ Open the **[install page](https://dcc-toolbox.github.io/)** and drag the button 
 bookmarks bar. Then open a ticket and click the bookmark — a panel appears in the top-right
 with the list, already copied to your clipboard.
 
+## Privacy &amp; liability
+
+- **It runs entirely on your machine.** The whole tool is the text stored inside your
+  bookmark. Nothing is installed, and there is no server, account or sign-in behind it.
+- **Nothing is ever sent anywhere.** It makes no network requests of any kind — no
+  telemetry, no analytics, no error reporting and no external scripts.
+- **No confidential information is extracted.** It only reads the ticket already open in
+  front of you, and it cannot see anything you don't already have access to.
+- **The output goes to two places only:** the panel on your screen and your clipboard.
+  Nothing is saved, cached or logged, beyond your two checkbox preferences.
+- **You can verify all of this.** `bookmarklet/bookmarklet.src.js` is the complete,
+  unminified source — read it before you use it.
+
+Provided as-is, with no warranty, and not affiliated with or endorsed by any ticketing
+system it reads. Anything you copy remains subject to your organisation's data handling
+and classification policy — you are responsible for where you paste it.
+
 ## What's in here
 
 | Path | Purpose |

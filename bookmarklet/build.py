@@ -83,6 +83,18 @@ PAGE = r"""<!doctype html>
              color: var(--dim); resize: vertical; }
   .note { background: #fff8e6; border: 1px solid #f0d68a; padding: 12px 16px;
           border-radius: 7px; margin-top: 14px; }
+  .liability { background: linear-gradient(180deg, #fff7f7, #fff0f1);
+               border: 1px solid #f1c4c7; border-left: 5px solid #c4314b;
+               border-radius: 9px; padding: 18px 22px 20px; margin: 28px 0 6px;
+               box-shadow: 0 2px 8px rgba(196,49,75,.07); }
+  .liability h2 { margin: 0; font-size: 18px; color: #a4262c;
+                  display: flex; align-items: center; gap: 9px; }
+  .liability h2 svg { flex: none; }
+  .liability ul { margin: 12px 0 0; padding-left: 20px; }
+  .liability li { margin: 7px 0; }
+  .liability li strong { color: #a4262c; }
+  .liability .fine { margin: 15px 0 0; padding-top: 13px; border-top: 1px solid #f2d3d5;
+                     font-size: 14px; line-height: 1.6; color: #7b5c5f; }
   details { border: 1px solid var(--line); border-radius: 7px; padding: 10px 14px; margin: 10px 0; }
   summary { cursor: pointer; font-weight: 600; }
   footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid var(--line);
@@ -100,6 +112,29 @@ PAGE = r"""<!doctype html>
   <a class="drag" id="bm" href="#">DC Central &rarr; List</a>
   <small>Drag this button up to your bookmarks bar</small>
 </div>
+
+<section class="liability">
+  <h2><svg width="19" height="19" viewBox="0 0 16 16" fill="#c4314b" aria-hidden="true"><path d="M8 .3 2 2.6v5c0 3.6 2.5 6.9 6 7.8 3.5-.9 6-4.2 6-7.8v-5L8 .3Zm3.4 5.5-4 4.4a.8.8 0 0 1-1.2 0L4.6 8.5a.8.8 0 0 1 1.2-1l1.1 1.2 3.4-3.8a.8.8 0 0 1 1.1 1.1Z"/></svg>Privacy &amp; liability</h2>
+  <ul>
+    <li><strong>It runs entirely on your machine.</strong> The whole tool is the text stored
+        inside your bookmark. Nothing is installed, and there is no server, account or
+        sign-in behind it.</li>
+    <li><strong>Nothing is ever sent anywhere.</strong> It makes no network requests of any
+        kind &mdash; no telemetry, no analytics, no error reporting and no external scripts.
+        This page has no tracking on it either.</li>
+    <li><strong>No confidential information is extracted.</strong> It only reads the ticket
+        already open in front of you, and it cannot see anything you don't already have
+        access to.</li>
+    <li><strong>The output goes to two places only:</strong> the panel on your screen and
+        your clipboard. Nothing is saved, cached or logged. Closing the tab leaves no trace
+        beyond your two checkbox preferences.</li>
+    <li><strong>You can verify all of this.</strong> The complete, unminified source is
+        published in the repository linked below &mdash; read it before you use it.</li>
+  </ul>
+  <p class="fine">Provided as-is, with no warranty, and not affiliated with or endorsed by any
+  ticketing system it reads. Anything you copy remains subject to your organisation's data
+  handling and classification policy &mdash; you are responsible for where you paste it.</p>
+</section>
 
 <h2>Setup</h2>
 <ol>
@@ -214,8 +249,8 @@ Failed Parts (2)
 </div>
 
 <footer>
-  Runs entirely in your browser. It only reads the ticket page you are already looking at and
-  sends nothing anywhere. For internal use.
+  Runs entirely in your browser and sends nothing anywhere.
+  <a href="https://github.com/DCC-Toolbox/dcc-toolbox.github.io">Read the source on GitHub</a>.
 </footer>
 
 <script id="payload" type="application/json">__PAYLOAD__</script>
