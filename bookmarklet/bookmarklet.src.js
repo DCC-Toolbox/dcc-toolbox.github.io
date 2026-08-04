@@ -549,7 +549,7 @@ var card = el("div",
 var bar = el("div",
 "display:flex;align-items:center;gap:8px;padding:8px 10px;background:#0f6cbd;color:#fff;" +
 "cursor:move;user-select:none");
-bar.appendChild(el("div", "font-weight:600", "DC Central \u2192 List"));
+bar.appendChild(el("div", "font-weight:600", "Ticket Scrubber"));
 var close = el("button", "margin-left:auto;background:transparent;border:0;color:#fff;font-size:17px;" +
 "line-height:1;cursor:pointer;padding:0 2px", "\u00d7");
 bar.appendChild(close);

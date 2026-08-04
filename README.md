@@ -1,12 +1,12 @@
-# DC Central &rarr; List
+# Ticket Scrubber
 
-Turns a DC Central ticket into a tidy, copy-ready list.
+Scrubs a cluttered ticket page down to a tidy, copy-ready list.
 
 ```
 20000000000 - Replace Processor
 
 Asset Details
-• Asset Location: ABC01/F01C01/AA1001/ABC01F01C01-AA1001
+• Asset Location: SITE1/COLO1/TILE1/SITE1COLO1-TILE1
 • Asset Tag: 10000001
 • Classification: CLASS-A
 • Serial: UNKNOWN_SERIAL
@@ -76,7 +76,7 @@ is left readable, which keeps the URL around 21 KB.
 
 ## How it reads the page
 
-DC Central ships two layouts and the tool handles both.
+The ticket site ships two layouts and the tool handles both.
 
 **Older (Angular).** `#tasks-details-header` carries the task ID, panels are
 `tasks-details-panel[label]`, field pairs are `<strong>` labels, and failed parts

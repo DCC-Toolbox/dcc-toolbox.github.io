@@ -1,4 +1,4 @@
-"""Builds the DC Central bookmarklet from bookmarklet.src.js.
+"""Builds the Ticket Scrubber bookmarklet from bookmarklet.src.js.
 
 Produces:
   bookmarklet.txt    - the javascript: URL to paste into a bookmark
@@ -43,8 +43,8 @@ PAGE = r"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DC Central &rarr; List</title>
-<meta name="description" content="A one-click bookmarklet that turns a DC Central ticket into a tidy, copy-ready list.">
+<title>Ticket Scrubber</title>
+<meta name="description" content="A one-click bookmarklet that scrubs a ticket page down to a tidy, copy-ready list.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f6cbd'/><g fill='white'><circle cx='9' cy='10' r='2'/><rect x='14' y='9' width='11' height='2' rx='1'/><circle cx='9' cy='16' r='2'/><rect x='14' y='15' width='11' height='2' rx='1'/><circle cx='9' cy='22' r='2'/><rect x='14' y='21' width='11' height='2' rx='1'/></g></svg>">
 <style>
   :root { --ink: #1b1b1b; --dim: #616161; --line: #e3e3e3; --brand: #0f6cbd; }
@@ -104,12 +104,12 @@ PAGE = r"""<!doctype html>
 <body>
 
 <header>
-  <h1>DC Central &rarr; List</h1>
-  <p class="sub">Turn any DC Central ticket into a tidy, copy-ready list &mdash; in one click.</p>
+  <h1>Ticket Scrubber</h1>
+  <p class="sub">Scrub a cluttered ticket page down to a tidy, copy-ready list &mdash; in one click.</p>
 </header>
 
 <div class="hero">
-  <a class="drag" id="bm" href="#">DC Central &rarr; List</a>
+  <a class="drag" id="bm" href="#">Ticket Scrubber</a>
   <small>Drag this button up to your bookmarks bar</small>
 </div>
 
@@ -140,7 +140,7 @@ PAGE = r"""<!doctype html>
 <ol>
   <li>Show the bookmarks bar with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>.</li>
   <li>Drag the blue button above onto it.</li>
-  <li>Open a DC Central ticket and click the bookmark.</li>
+  <li>Open a ticket and click the bookmark.</li>
 </ol>
 <p>A panel opens in the top-right with the formatted list, <strong>already copied to your
 clipboard</strong>. Drag its title bar to move it out of the way.</p>
@@ -151,7 +151,7 @@ All values below are made-up placeholders:</p>
 <pre>20000000000 - Replace Processor
 
 Asset Details
-&bull; Asset Location: ABC01/F01C01/AA1001/ABC01F01C01-AA1001
+&bull; Asset Location: SITE1/COLO1/TILE1/SITE1COLO1-TILE1
 &bull; Asset Tag: 10000001
 &bull; Classification: CLASS-A
 &bull; Serial: UNKNOWN_SERIAL
@@ -171,8 +171,8 @@ Failed Parts (2)
 <pre>20000000001 - Replace Single Mode Fiber Cable
 
 Source Details
-&bull; Device: ABC01-0100-0100-01AAA
-&bull; Asset Location: ABC01/F01C02/AA2001/ABC01F01C02-AA2001
+&bull; Device: SITE1-DEVICE-A
+&bull; Asset Location: SITE1/COLO2/TILE2/SITE1COLO2-TILE2
 &bull; Asset Tag: 10000002
 &bull; Classification: CLASS-A
 &bull; Location: ethernet5/15/1
@@ -180,8 +180,8 @@ Source Details
 &bull; MSFID: MSF-000000
 
 Destination Details
-&bull; Device: ABC02-0101-0300-07AA
-&bull; Asset Location: ABC02/F01C01/AA3001/ABC02F01C01-AA3001
+&bull; Device: SITE2-DEVICE-B
+&bull; Asset Location: SITE2/COLO1/TILE3/SITE2COLO1-TILE3
 &bull; Asset Tag: 10000003
 &bull; Classification: CLASS-A
 &bull; Location: etp20b
@@ -190,11 +190,11 @@ Destination Details
 
 Failed Parts (2)
 1. Replace Single Mode Fiber Cable
-   &bull; Location: abc01-0100-0100-01aaa:ethernet5/15/1
+   &bull; Location: site1-device-a:ethernet5/15/1
    &bull; Serial:
    &bull; Model:
 2. Replace Single Mode Fiber Cable
-   &bull; Location: abc02-0101-0300-07aa:etp20b
+   &bull; Location: site2-device-b:etp20b
    &bull; Serial:
    &bull; Model:</pre>
 
